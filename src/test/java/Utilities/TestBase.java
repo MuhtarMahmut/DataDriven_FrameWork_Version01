@@ -12,9 +12,9 @@ import org.testng.ITestResult;
 import org.testng.annotations.*;
 import java.util.concurrent.TimeUnit;
 
-public abstract class TestBase {
+public abstract class TestBase implements Driver{
 
-    protected  static WebDriver driver;
+    public  static WebDriver driver;
     protected static ExtentReports reports=new ExtentReports();
     protected static ExtentHtmlReporter html= new ExtentHtmlReporter("src/test/Reports/HTML/MyHTMLReport.html");
     protected static ExtentTest tests;
@@ -27,7 +27,7 @@ public abstract class TestBase {
     @BeforeMethod()   // controls how the @Test method will be executed.
     protected void setup01(){
         // this before method is to setup browsers
-        driver = Driver.getDriver();
+        driver = newdriver;
         act=new Actions(driver);
         wait=new WebDriverWait(driver,50);
 

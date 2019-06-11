@@ -6,7 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="DDT_FrameWork_Version01" />
+        <module name="FrameWork_Version2" />
       </profile>
     </annotationProcessing>
   </component>
